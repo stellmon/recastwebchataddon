@@ -17,8 +17,8 @@
 
 #recastwebchataddon.key=value
 
-recastwebchataddon.channelid=300899f3-34de-4b95-b51c-8c133d8fc41a
-recastwebchataddon.token=f57223adf67cb36cb9be0c881785b8e4
+recastwebchataddon.channelid=YOUR_RECAST_CHANNEL_ID
+recastwebchataddon.token=YOUR_RECAST_TOKEN
 
 # Specifies the location of the spring context file added automatically to the global platform application context.
 recastwebchataddon.application-context=recastwebchataddon-spring.xml
