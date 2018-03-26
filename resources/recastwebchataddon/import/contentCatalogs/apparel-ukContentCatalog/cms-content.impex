@@ -1,0 +1,28 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2017 SAP SE or an SAP affiliate company.  All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+$contentCatalog=apparel-ukContentCatalog
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
+$jarResourceCms=jar:com.sap.hybris.se.recastwebchataddon.constants.RecastwebchataddonConstants&/recastwebchataddon/import/cockpit/cmscockpit
+$addonExtensionName=recastwebchataddon
+
+
+########### RECAST ###########
+
+### Add recastWebChat Component ###
+INSERT_UPDATE JspIncludeComponent;uid[unique=true]      ;name                     ;page                                                                      ;&componentRef         ;$contentCV[unique=true]
+                                 ;RecastWebChatComponent;Recast Web Chat Component;/WEB-INF/views/addons/$addonExtensionName/responsive/cms/recastWebChat.jsp;RecastWebChatComponent;
+  
+ 
+### Update AddToCartSlot to include CimagineVisualizeLinkComponent
+UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)[mode=append]
+                  ;                       ;FooterSlot      ;RecastWebChatComponent
+
+
