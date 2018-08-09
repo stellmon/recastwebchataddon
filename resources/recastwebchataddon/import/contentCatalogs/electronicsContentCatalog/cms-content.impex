@@ -21,7 +21,7 @@ INSERT_UPDATE JspIncludeComponent;uid[unique=true]      ;name                   
                                  ;RecastWebChatComponent;Recast Web Chat Component;/WEB-INF/views/addons/$addonExtensionName/responsive/cms/recastWebChat.jsp;RecastWebChatComponent;
   
  
-### Update AddToCartSlot to include CimagineVisualizeLinkComponent
+### Update FooterSlot to include RecastWebChatComponent
 UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(&componentRef)[mode=append]
                   ;                       ;FooterSlot      ;RecastWebChatComponent
 
