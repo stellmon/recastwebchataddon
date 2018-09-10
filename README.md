@@ -38,7 +38,7 @@ CHECK:   apparelstore
          NO:  Activate Solr Cron Jobs
 ```
 7. Modify project.properties in recastwebchataddon extension or config/local.properties, then add following parameters.
-You can find each value in Web Chat configuration of Connect tab.
+You can find each value in Web Chat configuration of Connect tab. You can update parameters through hAC (hybris Admin Console) as well to avoid server restart. Keep in mind you need to update properties file to make them persistent.
 ```properties
 recastwebchataddon.channelid=YOUR_RECAST_CONFIG_CHANNEL_ID
 recastwebchataddon.token=YOUR_RECAST_CONFIG_TOKEN
